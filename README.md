@@ -1,4 +1,4 @@
-**scaffold-p5-ccapture**
+![P5.js logo](./img/asterisk.png) **scaffold-p5-ccapture**
 ====================
 
 Scaffold setup for capturing video of `p5.js` animation.
