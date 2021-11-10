@@ -14,7 +14,7 @@ Set up
 
     ```
     git clone https://github.com/dkostmii/scaffold-p5-ccapture.git
-    cd scaffold-p5-capture
+    cd scaffold-p5-ccapture
     ```
 
 2. Install **browser-sync**:
