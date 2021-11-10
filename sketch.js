@@ -6,6 +6,11 @@ let baseSize = 1080
 const fps = 30
 const captureFrames = 30
 
+/* 
+  Count frames captured 
+  Will be useful with manual looping */
+let framesCaptured
+
 if (!CCapture) {
   throw new Error('CCapture is not loaded')
 }
@@ -24,22 +29,38 @@ function setup() {
   canvas = createCanvas(baseSize, baseSize).canvas;
   frameRate(fps);
 
+  framesCaptured = 0
   /* loop must be enabled in order to capture frames
-     alternatively you can call draw() manually inside draw()
-     for that comment the line below */
+     alternatively you can call redraw() manually from your events */
+
+  /* for that comment the line below */
   loop()
+
+  /* and uncomment this */
+  // noLoop()
+
+  /* framesCaptured will count the frames for you */
 }
 
+/*
+function mousePressed() {
+  redraw()
+}
+*/
+
 function draw() {
-  if (capture && frameCount === 1) {
+  if (capturer && frameCount === 1) {
     capturer.start()
   }
 
+
   // TODO: write your sketch here
   
+
   if (capture) {
       capturer.capture(canvas)
-      if (frameCount === captureFrames) {
+      framesCaptured++
+      if (framesCaptured === captureFrames + 1) {
         capturer.stop()
         capturer.save()
         capture = false
@@ -48,8 +69,4 @@ function draw() {
         noLoop()
       }
   }
-
-  /* manual frame looping
-     uncomment line below to enable */
-  // draw()
 }
