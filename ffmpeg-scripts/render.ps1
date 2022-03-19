@@ -1,0 +1,1 @@
+ffmpeg -r 30 -f image2 -s 1080x1080 -i "%07d.png" -vcodec libx264 -crf 17 -pix_fmt yuv420p output.mp4

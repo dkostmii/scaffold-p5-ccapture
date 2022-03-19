@@ -1,0 +1,23 @@
+{
+  "name": "scaffold-p5-ccapture",
+  "version": "1.0.0",
+  "description": "![P5.js logo](./img/asterisk.png) **scaffold-p5-ccapture**\r ====================",
+  "main": "sketch.js",
+  "scripts": {
+    "start": "npx browser-sync start --server -f -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkostmii/scaffold-p5-ccapture.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dkostmii/scaffold-p5-ccapture/issues"
+  },
+  "homepage": "https://github.com/dkostmii/scaffold-p5-ccapture#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.9"
+  }
+}
